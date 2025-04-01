@@ -1,0 +1,37 @@
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: hsl(158, 91%, 45%);
+  color: white;
+}
+/* Add your styles in a separate CSS file or style section */
+label {
+  display: inline-block;
+  width: 200px; /* Adjust the width as needed */
+  margin-bottom: 5px; /* Add spacing between labels */
+}
+
+input {
+  width: 200px; /* Adjust the width as needed */
+  margin-bottom: 10px; /* Add spacing between input fields */
+}
+
+button {
+  margin-top: 10px; /* Add spacing above the button */
+}

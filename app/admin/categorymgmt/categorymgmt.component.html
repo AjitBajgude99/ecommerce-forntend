@@ -1,0 +1,26 @@
+
+<table border="1">
+<tr>
+    <th>SN</th>
+    <th>Name</th>
+    <th>Action</th>
+</tr>
+<tr *ngFor="let cat of list; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{cat.name}}</td>
+    <td><button (click)="deleteCategory(cat.id)">Delete</button></td>
+
+</tr>
+</table>
+
+<br>
+
+<!-- addnew -->
+
+Add New Category :
+<input type="text" [(ngModel)]="name">
+<button (click)="addCategory()">ADD</button>
+
+
+
+  

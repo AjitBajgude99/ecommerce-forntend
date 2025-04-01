@@ -1,0 +1,50 @@
+/* General Styles */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+  }
+  
+  /* Container */
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  /* Header */
+  h2 {
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Button */
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Product Component */
+  app-product {
+    margin-top: 20px;
+    display: block;
+    /* Add more styles as needed for the product component */
+  }

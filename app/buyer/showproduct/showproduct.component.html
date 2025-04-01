@@ -1,0 +1,78 @@
+<!-- <div class="search-product">
+Category:<select [(ngModel)]="categoryid">
+    <option *ngFor="let c of cats" [value]="c.id">{{c.name}}</option>
+</select>
+<br> <br>
+
+Minprice:<input type="number" [(ngModel)]="minprice"> <br> <br>
+Maxprice:<input type="number" [(ngModel)]="maxprice"> <br> <br>
+Rating:<input type="number" [(ngModel)]="minrating"> <br>
+</div>
+<br><br> -->
+
+<div>
+  <!-- Category Selection -->
+  <label for="category">Category</label>
+  <select id="category" [(ngModel)]="categoryid">
+    <option *ngFor="let c of cats" [value]="c.id">{{c.name}}</option>
+  </select>
+  <br><br>
+
+  <!-- Price Range -->
+  <label for="minprice">Min Price</label>
+  <input type="number" id="minprice" [(ngModel)]="minprice">
+  <br><br>
+
+  <label for="maxprice">Max Price</label>
+  <input type="number" id="maxprice" [(ngModel)]="maxprice">
+  <br><br>
+
+  <!-- Rating -->
+  <label for="minrating">Rating</label>
+  <input type="number" id="minrating" [(ngModel)]="minrating">
+  <br><br>
+</div>
+
+<button class="button2" (click)="showProducts()">ShowProducts</button>
+<br><br>
+
+
+<table border="1" id="customers">
+    <tr>
+    <th>SN</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Discount</th>
+    <th>Rating</th>
+    <th>Status</th>
+    </tr>
+
+    <tr *ngFor="let p of prods;let i=index">
+   
+        <td>{{i+1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price | currency:'INR'}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.discount+"%"}}</td>
+        <td>{{p.rating}}</td>
+        <td>
+            <ng-container *ngIf="p.quantity==0">OutOfStock</ng-container>
+            <ng-container *ngIf="p.quantity>0">Available</ng-container>
+            <ng-container *ngIf="p.quantity>=5">Limited Stock Hurry Up</ng-container>
+        </td>
+       <td> <ng-container *ngIf="p.days<5">Recently Added</ng-container></td>
+
+            <td>Feedback :<select [(ngModel)]="p.stars" (change)="updateRating(p)">
+                <option [value]="1">1 star</option>
+                <option [value]="2">2 star</option>
+                <option [value]="3">3 star</option>
+                <option [value]="4">4 star</option>
+                <option [value]="5">5 star</option>
+            </select></td>
+
+       <td><button class="button2" (click)="addToCart(p)">AddToCart</button></td>
+    </tr>
+</table>
+
+        

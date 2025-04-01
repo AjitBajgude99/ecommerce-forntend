@@ -1,0 +1,102 @@
+
+<!-- <table border="1">
+    <thead>
+        <tr>
+            <th>SRNo</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Discount</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <!- id, name, description, discount, price, quantity, rating, cat -->
+    <!-- <tbody>
+        <tr *ngFor="let p of list;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.discount}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.rating}}</td>
+            <td>{{p.cat}}</td>
+           
+        </tr>
+    </tbody>
+</table>
+<br><br>
+
+AddNewProduct : <br>
+<br>
+Name: <input type="text" [(ngModel)]="name"> <br><br>
+Price: <input type="number" [(ngModel)]="price"> <br><br>
+Quantity: <input type="number" [(ngModel)]="quantity"> <br><br>
+Description: <input type="text" [(ngModel)]="description"> <br><br>
+Discount: <input type="number" [(ngModel)]="discount"> <br><br>
+Category:<select [(ngModel)]="catid">
+    <option *ngFor="let cat of list2" [value]="cat.id">{{cat.name}}</option>
+</select>
+
+<button (click)="addProduct()">ADD</button>  -->
+  
+<!-- code with css -->
+
+
+    <table border="1" id="customers">
+      <thead>
+        <tr>
+          <th>SRNo</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Discount</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Rating</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of list; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.description}}</td>
+          <td>{{p.discount}}</td>
+          <td>{{p.price}}</td>
+          <td>{{p.quantity}}</td>
+          <td>{{p.rating}}</td>
+          <td>{{p.cat}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+   <div class="add-product-form">
+      <h3>Add New Product</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name">
+      <br>
+      <label for="price">Price:</label>
+      <input type="number" id="price" [(ngModel)]="price">
+      <br>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" [(ngModel)]="quantity">
+      <br>
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="description">
+      <br>
+      <label for="discount">Discount:</label>
+      <input type="number" id="discount" [(ngModel)]="discount">
+      <br>
+      <label for="category">Category:</label>
+      <select id="category" [(ngModel)]="catid">
+        <option *ngFor="let cat of list2" [value]="cat.id">{{cat.name}}</option>
+      </select>
+      <br>
+      <br>
+      <button style="width: 150px; height: 40px;" (click)="addProduct()">ADD</button>
+    </div>
+  

@@ -1,0 +1,12 @@
+
+
+<h2> Welcome {{name}} </h2> <br>
+
+<button (click)="changeWhatToShow(1)">Categories</button>
+<button (click)="logout()">Back</button>
+
+<div *ngIf="whatToShow==1">
+    <app-categorymgmt></app-categorymgmt>
+</div>
+
+<link rel="stylesheet" href="admin.component.css">

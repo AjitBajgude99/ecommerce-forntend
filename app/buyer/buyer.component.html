@@ -1,0 +1,14 @@
+<h2>Welcome {{name}}</h2>
+
+<button class ="button2" (click)="changeWhatToShow(1)">Search Product</button>
+<button class ="button2" (click)="changeWhatToShow(2)">Your CART</button>
+<button class ="button2" (click)="logout()">Back</button>
+<br><br>
+
+<div *ngIf="whatToShow==1">
+    <app-showproduct></app-showproduct>
+</div>
+<div *ngIf="whatToShow==2">
+    <app-cart></app-cart>
+</div>
+

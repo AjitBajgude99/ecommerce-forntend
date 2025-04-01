@@ -1,0 +1,30 @@
+<table border="1">
+<tr>
+    <th>SN</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+    <th>Discount</th>
+    <th>Price After Discount</th>
+    <th>Action</th>
+</tr>
+
+<tr *ngFor="let l of lists; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{l.name}}</td>
+    <td>{{l.price | currency:'INR'}}</td>
+    <td><input type="number" [(ngModel)]="l.quantity1"></td>
+    <td>{{l.price*l.quantity1 | currency: 'INR'}}</td>
+    <td>{{l.discount+"%"}}</td>
+    <td>{{l.price * l.quantity1 * (1 - l.discount/100) | currency: 'INR'}}</td>
+    <td><button (click)="deleteProduct(l.id)">Remove from Cart</button></td>
+</tr>
+
+<tr id="final">Final Price : {{getFinalPrice()|currency: 'INR'}}</tr>
+</table>
+
+<br>
+<br>
+
+<button (click)="orderProduct(lists)">ORDER</button>
